@@ -1,0 +1,68 @@
+#
+#
+#
+# PLEASE DO NOT REMOVE THIS COMMENTS, NO BLANK LINES
+# This is a metadata file that contains the Subject matching
+# Each line starts with a Subject to tell the system on what subject from the email to be parsed
+# File is delimited by |
+# Column 0 --> Subject
+# Column 1 --> eMail Originator (Ebay/Paypal or Amazon)
+# Column 2 --> Primary Index Indicator (derived by person, MUST be unique)
+# Column 3 --> Subject from email are delimited by space, and they will be converted to an array.  We are telling the system on what array position should 
+#              be taken to check our parser
+# Column 4 --> What subject to check based on Column 3 values
+# Column 5 --> What values can be taken and assigned to a variable found from variable_pattern.txt
+#              Syntax is <variable_name> = <Position>, position can be a number or certain key words such as last, last-1, 1 to last etc.  If no variables can be derived, then just blank it.
+# Column 6 --> Some times, values derived from subject may contain unwanted characters.  The remove=<what charcters can be removed> should be passed.  If nothing to be removed,
+#              then leave it as blank
+# Column 7 --> will tell what kind of transaction was that (e.g dispute, cancel_order, refund etc). 
+# Once the subject passes the test, it also tells what values that we can derive from the subject
+# PLEASE DO NOT REMOVE THIS, NO BLANK LINES
+#
+#
+#
+Subject|eBay|1|0,1,2,3,4,5,6|A case is open: Please respond now|||txn_type=dispute
+Subject|eBay|2|0,1,2,3,4|Cancel transaction request denied for|item_id=5||txn_type=cancel_order
+Subject|eBay|3|0,3,4,5|Case Buyer received refund|case_id=2|remove=:|txn_type=refund
+Subject|eBay|4|0,3,4,5,6|Case Buyer sent you message|case_id=2|remove=:|txn_type=dispute
+Subject|eBay|5|0,3,4,5,6,7,8,9,10,11|Case eBay has made a final decision in this case|case_id=2|remove=:|txn_type=dispute
+Subject|eBay|6|0,1,2,3|Delay in eCheck payment|||txn_type=payments
+Subject|eBay|7|0,1,2,3,4|eBay counteroffer for your item:|item_name=5 to last-1, item_id=last|remove=(,remove=)|txn_type=counter_offer
+Subject|eBay|8|0,1,2,3,4|eBay Counteroffer Submitted to buyer:|item_name=5 to last-1, item_id=last|remove=(,remove=)|txn_type=offer_2_buyer
+Subject|eBay|9|1,2,3|eCheck payment cleared|buyer_user_id=0|remove='s|txn_type=payments
+Subject|eBay|10|2,3,4,5|Instant payment received from|item_id=1, buyer_user_id=6, buyer_email_id=7|remove=#, remove=(, remove=)|txn_type=payments
+Subject|eBay|11|2,3,4,5,6|just paid for your invoice|invoice_id=last,buyer_name=0 to last-1||txn_type=payments
+Subject|PP|12|0,1,2,3,4,5|New Item Not Received Dispute: Case|case_id=last|remove=#|txn_type=dispute
+Subject|eBay|13|0,1,2,3|Notification of payment received|||txn_type=payments
+Subject|eBay|14|0,1,2,3|Our investigation is complete|||txn_type=dispute
+Subject|eBay|15|0,1,2,3|PayPal eCheck payment failed|||txn_type=payments
+Subject|eBay|16|0,1,2,3|PayPal instant payments received|||txn_type=sale
+Subject|eBay|17|0,1,2,3,4,5,6,7|Receipt for Your Payment to eBay Inc Shipping|||txn_type=receipt
+Subject|eBay|18|0,1,2,3,4,5,6|Receipt for Your Payment to eBay Inc.|||txn_type=payments
+Subject|eBay|19|0,1,2,3,4,5,6,7|Receipt for Your Payment to U.S. Postal Service|||txn_type=payments
+Subject|eBay|20|0,1,2,3,4,5|Receipt for your PayPal payment to|shop_name=6 to last||txn_type=payments
+Subject|eBay|21|0,1,2,3,4,5,6,7|Receipt of Payment for Invoiced eBay Seller Fees|||txn_type=payments
+Subject|eBay|22|0,1,2,3,4,5,6,7|Refund from eBay Inc Shipping|||txn_type=payments
+Subject|eBay|23|0,1|Refund issued:|item_name=2 to last||txn_type=refund
+Subject|AMZN|24|0,1,2|Resolution for CaseID:|case_id=3||txn_type=dispute
+Subject|PP|25|0,1,2,3,4|Resolution of Buyer Complaint Case|case_id=6||txn_type=dispute
+Subject|AMZN|26|0,1,2,3,4,5|Return authorization request for order #|order_id=6||txn_type=returns
+Subject|AMZN|27|0,1,2,3|Return Requested for order|order_id=4||txn_type=returns
+Subject|eBay|28|0,1|Return started:|item_name=2 to last||txn_type=returns
+Subject|eBay|29|0,1,2,3|Shipping label created for|item_name=4 to last-1, item_id=last||txn_type=receipt
+Subject|AMZN|30|0,1,2|Sold, ship now:|sku_id=3,item_name=4 to last||txn_type=sale
+Subject|eBay|31|0,1,2,3,4,5,6|Thank you for creating a new Case:|case_id=7||txn_type=dispute
+Subject|eBay|32|0,1,2,3|Transaction has been cancelled:|item_name=4 to last-1, item_id=last||txn_type=cancel order
+Subject|eBay|33|0,1,2,3,4,5,6|Unpaid item case has been closed for|item_name=7 to last||txn_type=dispute
+Subject|eBay|34|0,1,2,3,4|Unpaid item case open for|item_name=5 to last||txn_type=dispute
+Subject|USPS|35|0,1,2,3,4|USPS - Click-N-Ship(R) Payment Confirmation|||txn_type=payments
+Subject|eBay|36|0,1,2,3,4|Void label request submitted for|item_name=5 to last, item_id=last|remove=(, remove=)|txn_type=void
+Subject|eBay|37|0,1,2,3,4,5|We're transferring money to your bank|||txn_type=money transfer
+Subject|eBay|38|0,1,2,3,4,5,6,7|You created a shipping label with PayPal Shipping|||txn_type=payments
+Subject|eBay|39|0,1,2,3|Your eBay item sold!|item_name=4 to last-1, item_id=last||txn_type=sale
+Subject|eBay|40|0,1,2,3,4|Your invoice for eBay purchases:|item_name=5 to last-1, item_id=last|remove=(, remove=#)|txn_type=invoice sent
+Subject|AMZN|41|0,1,2,3,4,5|Your payment is on its way|||txn_type=withdrawl
+Subject|eBay|42|4,5,6,7,8,9|You've got an eCheck payment from|item_id=2, buyer_email_id=last||txn_type=payments
+Subject|eBay|43|0,1,2|You've got funds|||txn_type=payments
+Subject|eBay|44|0,1,2,3,4,5,6,7|You've received an offer for your eBay item,|item_name=8 to last-1, item_id=last||txn_type=offer
+Subject|eBay|45|0,1,2,3,4,5,6|A request is open: Please respond now|case_id=last||txn_type=dispute

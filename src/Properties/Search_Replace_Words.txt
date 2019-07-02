@@ -1,0 +1,726 @@
+#
+#
+# PLEASE DO NOT REMOVE THIS COMMENTS, NO BLANK LINES
+# This is a meta data file that contains the the search/remove replace on the content/body part of the email that passes the subject
+# Once the Subject is passed, the index from subject_pattern.txt plays a vital role
+# This file is delimited to pipe
+#
+# Note: 0 indicator is for subjects that contains special unwanted characters to be removed and that will be applied to all the subjects found in subject_pattern.txt.
+#
+# Column 1 --> index column based on subject_pattern.txt
+# Column 2 --> contents to search from the email
+# Column 3 --> variable based on variable_pattern.txt or just plain replacable text.  This may also contains blank space where nothing is needed to store.
+#              All variable should end with an = sign.
+# Column 4 --> will have a Y/N indicator.  Y --> create a pipe delimeter in the content file.  Which will be later used as Name/Value pair.  N means no pipe delimeter.
+#
+#
+# PLEASE DO NOT REMOVE THIS, NO BLANK LINES
+#
+#
+#
+0| on eBay.co.uk:|:|N
+0| on eBay.de:|:|N
+0| on eBay.com:|:|N
+0|PayPal: | |N
+1|Hi|seller_user_id=|Y
+1|Heres what just happened:| |Y
+1|shop_at_lemo,|shop_at_lemo|N
+1|let us know that they havent received|item_name=|Y
+1|let us know that|item_name=|Y
+1|didnt match the description| |Y
+1|and has requested a shipping status update| |Y 
+1|and has requested a refund.| |Y
+1|A case is open and you can view the case and the buyers message in the eBay Resolution Center| |Y 
+1|Heres what you need to do next:| |Y
+1|You should respond to the buyer and try to resolve the problem by|disputed_resolve_dt=|Y
+1|Most buyers and sellers are able to work things out by communicating with each other directly| |Y 
+1|If you havent already done so, provide shipping information, such as an item tracking number, shipping date, and shipping carrier to the buyer in the Resolution Center| |Y 
+1|What you should know:| |Y 
+1|If you dont reply, or if the buyer isnt satisfied with the outcome by|disputed_resolve_dt=|Y
+1|the buyer can escalate the case to eBay Customer Support| |Y
+1|Buyers Message:|dispute_buyer_notes=|Y
+1|Item # :|item_id=|Y
+1|Sale price:|sale_price=|Y
+1|Quantity:|qty_sold=|Y
+1|Sale date:|sale_date=|Y
+1|Buyer:|buyer_user_id=|Y
+1|Case #:|case_id=|Y
+1|Case opened:|case_opened=|Y
+1|View purchased item| |Y
+1|Email reference id:|email_reference_id=|Y
+1|Learn More to protect yourself| |Y 
+1|eBay sent this email to you at|seller_email_id=|Y
+1|about your account registered on www.ebay.com.| |Y 
+1|eBay sends these emails based on the preferences you set for your account. To unsubscribe from this email, change your communication preferences. Please note that it may take up to 10 days to process your request. Visit our Privacy Policy and User Agreement if you have any questions.| |Y 
+1|Copyright © 2014 eBay Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners.| |Y 
+1|eBay and the eBay logo are trademarks of eBay Inc. eBay Inc. is located at 2145 Hamilton Avenue, San Jose, CA 95125.| |Y
+2|eBay sent this message to|seller_full_name=|Y
+2|Your registered name| |Y
+2|Hi|seller_user_id=|Y
+2|(shop_at_lemo)|seller_user_id=shop_at_lemo|Y
+2|, The buyer,|buyer_user_id=|Y
+2|has rejected your| |Y
+2|with the buyer.|item_name=|Y
+2|Item # :|item_id=|Y
+2|Sale price:|sale_price=|Y
+2|Sale date:|sale_date=|Y
+2|Case opened:|case_opened=|Y
+2|View purchased item| |Y
+2|Email reference id:email_reference_id=|Y
+2|Learn More to protect yourself from spoof (fake) emails.| |Y 
+2|email to you at|seller_email_id=|Y
+3|eBay sent this message to|shop_name=|Y
+3|Your registered name| |Y
+3|Hi|seller_user_id=|Y
+3|, Thanks for sending a refund of|total_amt=|Y
+3|to your buyer.| |Y
+3|in the Resolution Center.|item_name=|Y
+3|Item # :|item_id=|Y
+3|Sale price:|sale_price=|Y
+3|Sale date:|sale_date=|Y
+3|Quantity:|qty_sold=|Y
+3|Buyer:|buyer_user_id=|Y
+3|Case #:|case_id=|Y
+3|Case opened:|case_opened=|Y
+3|Case closed:|case_closed=|Y
+3|View purchased item| |Y
+3|Email reference id:|email_reference_id=|Y
+3|Learn More to protect yourself from spoof| |Y
+3|eBay sent this email to you at|seller_email_id=|Y
+3|about your account registered| |Y
+4|eBay sent this message to|shop_name=|Y
+4|Your registered name| |Y
+4|Hi|seller_user_id=|Y
+4|The buyer sent you a message.| |Y
+4|Buyers message:|buyer_terms=|Y
+4|You can also view the details| |Y
+4|in the Resolution Center.|item_name=|Y
+4|Item # :|item_id=|Y
+4|Sale price:|sale_price=|Y
+4|Sale date:|sale_date=|Y
+4|Quantity:|qty_sold=|Y
+4|Buyer:|buyer_user_id=|Y
+4|Case #:|case_id=|Y
+4|Case opened:|case_opened=|Y
+4|Case closed:|case_closed=|Y
+4|View purchased item| |Y
+4|Email reference id:|email_reference_id=|Y
+4|Learn More to protect yourself from spoof| |Y
+4|eBay sent this email to you at|seller_email_id=|Y
+4|about your account registered| |Y
+5|eBay sent this message to|shop_name=|Y
+5|Your registered name| |Y
+5|Hi|seller_user_id=|Y
+5|eBay Customer Support has reviewed| |Y
+5|Please note: Decisions made in the framework of the eBay Money Back Guarantee when you pay with PayPal are based on PayPals Buyer Protection policy| |N
+5|.  . | |N
+5|in the Resolution Center|item_name=|Y
+5|Item # :|item_id=|Y
+5|Sale price:|sale_price=|Y
+5|Sale date:|sale_date=|Y
+5|Quantity:|qty_sold=|Y
+5|Buyer:|buyer_user_id=|Y
+5|Case #:|case_id=|Y
+5|Case opened:|case_opened=|Y
+5|Case closed:|case_closed=|Y
+5|View purchased item| |Y
+5|Email reference id:|email_reference_id=|Y
+5|Learn More to protect yourself from spoof| |Y
+5|eBay sent this email to you at|seller_email_id=|Y
+5|about your account registered| |Y
+6|Hello|shop_name=|Y
+6|An eCheck payment from|buyer_full_name=|Y
+6|was declined by the| |Y
+6|Amount:|total_amt=|Y
+6|USD|currency_name=USD|Y
+6|currency_name|currency_name|Y
+6|Transaction ID:|txn_id=|Y
+6|Sender:|buyer_full_name=|Y
+6|Senders email:|buyer_email_id=|Y
+6|Thanks,| |Y
+6|PayPal Email ID|email_reference_id=|Y
+7|eBay sent this message to|shop_name=|Y
+7|Your registered name| |Y
+7|Dear|seller_user_id=|Y
+7|has sent you a| |Y
+7|consider the offer.|item_name=|Y
+7|Offer price:|offer_price=|Y
+7|Buy It Now price:|buy_it_now_price|Y
+7|Offer expires:|offer_expires=|Y
+7|Buyer:|buyer_user_id=|Y
+7|Buyer terms:|buyer_terms=|Y
+7|Go to My eBay| |Y
+7|Including shipping| |Y
+7|Email reference id:|email_reference_id=|Y
+7|Learn More to| |Y
+8|eBay sent this email to you at|seller_email_id=|Y
+8|about your account registered| |Y
+8|Dear|seller_user_id=|Y
+8|, You have sent a counteroffer of|offer_price=|Y
+8|on the following eBay item| |Y
+8|to your counteroffer.|item_name=|Y
+8|Offer price:|offer_price=|Y
+8|Buy It Now price:|buy_it_now_price=|Y
+8|Offer expires:|offer_expires=|Y
+8|Seller Terms:|seller_terms=|Y
+8|Go to My eBay| |Y
+8|Email reference id:|email_reference_id=|Y
+8|Learn More to protect| |Y 
+8|eBay sent this email to you at|seller_email_id=|Y
+8|about your account registered on www.ebay.com| |Y
+9|An eCheck cleared|txn_dt=|Y
+9|Transaction ID:|txn_id=|Y
+9|Hello|shop_name=|Y
+9|The eCheck from|buyer_full_name=|Y
+9| for |total_amt=|Y
+9|has cleared,| |Y
+9|Note to buyer|buyer_terms=|Y
+9|Shipping address - Confirmed|address_status_flag=Confirmed buyer_address_line1=|Y
+9|Shipping address - UnConfirmed|address_status_flag=UnConfirmed buyer_address_line1=|Y
+9|Shipping address|buyer_address_line1=|Y
+9|buyer_address_line1|buyer_address_line1|Y
+9|Buyer|buyer_email_id=|Y
+9|There are no details available| |Y
+9|Qty Amount|item_name=|Y
+9|Item#|item_id=|Y
+9|Subtotal| |Y
+9|Shipping and handling|s_h_amt=|Y
+9|Tax|sales_tax=|Y
+9|Total|total_amt=|Y
+9|Payment sent to|seller_email_id=|Y
+9|Help Center Resolution| |Y
+9|PayPal Email ID|email_reference_id=|Y
+10|abcd|txn_dt=|Y
+10|Transaction ID:|txn_id=|Y
+10|Hello |shop_name=|Y
+10|You received a payment of|total_amt=|Y
+10|Tax|sales_tax=|Y
+10|Seller Protection -|seller_protection_flag=|Y
+10|Buyer|buyer_full_name=|Y
+10|Note to seller|buyer_terms=|Y
+10|Shipping address|buyer_address_line1=|Y
+10|Shipping details|shpng_details=|Y
+10|Description| |Y
+10|Unit price Qty Amount|item_name=|Y
+10|Item#|other_col=|Y
+10|Shipping and handling|s_h_amt=|Y
+10|Total|Total|Y
+10|Payment sent to|seller_email_id=|Y
+10|Questions| |Y
+10|PayPal Email ID|email_reference_id=|Y
+10|USD from|currency_name USD buyer_user_id|N
+10|currency_name|currency_name=|Y
+10|buyer_user_id|buyer_user_id=|Y
+11|Transaction ID:|txn_id=|Y
+11|Dear|shop_name=|Y
+11|, Thanks for using PayPal| |Y
+11|Please check the Transaction Details page for this payment| |Y
+11|Note from customer|buyer_terms=|Y
+11|Customer|buyer_full_name=|Y
+11|Shipping address -|address_status_flag=|Y
+11|confirmed|confirmed buyer_address_line1=|N
+11|unconfirmed|unconfirmed buyer_address_line1=|N
+11|buyer_address_line1|buyer_address_line1|Y|
+11|Description Unit| |Y
+11|Qty Amount|item_name=|Y
+11|Subtotal|total_amt=|Y
+11|Shipping and handling|shpng_price=|Y
+11|Invoice ID|invoice_id=|Y
+11|Total| |Y
+11|USD|currency_name=USD|N
+11|currency_name|currency_name|Y
+11|Sincerely,| |Y
+11|PayPal Email ID|email_reference_id=|Y
+12|Transaction ID:|txn_id=|Y
+12|Buyers name:|buyer_full_name=|Y
+12|Buyers email:|buyer_email_id=|Y
+12|Transaction amount:|total_amt=|Y
+12|Transaction date:|txn_dt=|Y
+12|Your transaction ID:|original_txn_id=|Y
+12|Case number:|case_id|Y
+12|Disputed Amount:|disputed_amt=|Y
+12|- The disputed amount| |Y
+12|By opening this dispute,|buyer_full_name=|Y
+12|USD|currency_name=USD|Y
+12|is asking for your help| |Y
+12|can escalate this dispute to a PayPal claim at any time|disputed_resolve_dt=|Y
+12|. On that date,| |Y
+12|PPID|email_reference_id=|Y
+13|Hello |shop_name=|Y
+13|, This email confirms| |Y
+13|, You received a payment of| |Y
+13|  Order Description:| |Y
+13|Receipt ID:|receipt_id=|Y
+13|The number above is| |Y
+13|Item Name:|item_name=|Y
+13|Item Number:|item_id=|Y
+13|Quantity:|qty_sold=|Y
+13|Cart Subtotal:|sale_price=|Y
+13|Cart Total:|total_amt=|Y
+13|Shipping:| |Y
+13|Sales Tax:|sales_tax=|Y
+13|Cart Total:|total_amt=|Y
+13|USD| |N
+13|Shipping and handling:|s_h_amt=|Y
+13|Currency:|currency_name=|Y
+13|U.S. Dollars|USD|N
+13|Transaction ID:|txn_id=|Y
+13|Insurance:|ins_amt=|Y
+13|Buyer:|buyer_full_name=|Y
+13|Buyers User ID:|buyer_user_id=|Y
+13|Shipping Information Address|buyer_address_line1=|Y
+13|Address status|address_status_flag=|Y
+13|Have you lifted your| |Y
+13|Total:| |Y
+13|Payment details| |Y
+13|Email ID|email_reference_id=|Y
+14|Hello|seller_full_name=|Y
+14|Buyers name:|buyer_full_name=|Y
+14|Buyers email:|buyer_email_id=|Y
+14|Transaction ID:|txn_id=|Y
+14|Transaction date:|txn_dt=|Y
+14|USD|currency_name=USD|Y
+14|Transaction amount:|sale_price=|Y
+14|Your transaction ID:|original_txn_id=|Y
+14|Case number:|case_id=|Y
+14|PPID|email_reference_id=|Y
+14|We have lifted the| |Y
+14|Thanks,| |Y
+15|Hello|shop_name=|Y
+15|An eCheck payment from| |Y
+15|USD|currency_name=USD|Y
+15|Amount:|sale_price=|Y
+15|Sender:|buyer_full_name=|Y
+15|Senders email:|buyer_email_id=|Y
+15|Transaction ID:|txn_id=|Y
+15|Transaction date:|txn_dt=|Y
+15|Item number:|item_id=|Y
+15|Item description:|item_name=|Y
+15|Thanks,| |Y
+15|PPID|email_reference_id=|Y
+16|abcd|txn_dt=|Y
+16|Transaction ID:|txn_id=|Y
+16|Hello |shop_name=|Y
+16|You received a payment of|total_amt=|Y
+16|Seller Protection -|seller_protection_flag=|Y
+16|Buyer|buyer_full_name=|Y
+16|Note to seller|buyer_terms=|Y
+16|Shipping address -|address_status_flag=|Y
+16|Unit price Qty Amount|item_name=|Y
+16|Item#|item_id=|Y
+16|Shipping and handling|s_h_amt=|Y
+16|Payment sent to|seller_email_id=|Y
+16|Questions| |Y
+16|PayPal Email ID|email_reference_id=|Y
+17|abcd|txn_dt=|Y
+17|Transaction ID:|txn_id=|Y
+17|USD to eBay Inc Shipping| |Y
+17|It may take a few moments| |Y
+17|Hello |shop_name=|Y
+17|You sent a payment of| |Y
+17|Merchant|seller_full_name=|Y
+17|Instructions to merchant|buyer_terms=|Y
+17|Merchant| |Y
+17|Description Unit price| |Y
+17|ShipSvc:|shipping_carrier_name=|Y
+17|, Trk#:|tracking_number=|Y
+17|, Postage:|shpng_price=|Y
+17|, Ins:|ins_amt=|Y
+17|USD to|USD seller_full_name=|N
+17|USD|currency_name=USD|Y
+17|seller_full_name=|seller_full_name=|Y
+17|Charge will appear| |Y
+17|Total|total_amt|Y
+17|Payment sent to|seller_email_id=|Y
+17|Invoice ID:|invoice_id=|Y
+17|Issues with this transaction| |Y
+17|PayPal Email ID|email_reference_id=|Y
+18|abcd|txn_dt=|Y
+18|Transaction ID:|txn_id=|Y
+18|Hello |shop_name=|Y
+18|You sent a payment of| |Y
+18|Instructions to merchant|buyer_terms=|Y
+18|Description Amount| |Y
+18|Merchant|seller_user_id=|Y
+18|Description Unit price| |Y
+18|Total|total_amt=|Y
+18|USD|currency_name=USD|Y
+18|USD to eBay Inc.|USD|N
+18|It may take a few moments for this transaction| |Y
+18|Payment sent to|seller_email_id=|Y
+18|Payment| |Y
+18|Receipt ID:|receipt_id=|Y
+18|Issues with this transaction| |Y
+18|PayPal Email ID|email_reference_id=|Y
+19|abcd|txn_dt=|Y
+19|Transaction ID:|txn_id=|Y
+19|Hello |shop_name=|Y
+19|, You sent a payment of|total_amt=|Y
+19|USD|currency_name=USD|Y
+19|to U.S. Postal Service|seller_email_id=|Y
+19|It may take a few moments for this transaction| |Y
+19|Merchant|shop_name=|Y
+19|800-275-8777| |Y
+19|Shipping details|shpng_details=|Y
+19|Description Unit price Qty| |Y
+19|Instructions to merchant|buyer_terms=|Y
+19|Shipping address -|address_status_flag=|Y
+19|confirmed|confirmed buyer_full_name=|N
+19|buyer_full_name|buyer_full_name|Y
+19|Amount|sale_price=|Y
+19|Subtotal| |Y
+19|Payment sent to|seller_email=|Y
+19|Invoice ID:|invoice_id=|Y
+19|Issues with this transaction| |Y
+19|PayPal Email ID|email_reference_id=|Y
+20|abcd|txn_dt=|Y
+20|Transaction ID:|txn_id=|Y
+20|Hello| |Y
+20|You sent a payment of|total_amt=|Y
+20|Thanks for using PayPal| |Y
+20|account. Seller|seller_user_id=|Y
+20|Note to seller|buyer_terms=|Y
+20|Shipping address -|address_status_flag=|Y
+20|Shipping details|shpng_details=|Y
+20|Description Unit price| |Y
+20|confirmed|confirmed buyer_full_name=|N
+20|buyer_full_name|buyer_full_name|Y
+20|Qty Amount|item_name=|Y
+20|Item#|item_id=|Y
+20|---- Total|----|Y
+20|Shipping and handling|shpng_price=|Y
+20|Insurance|ins_amt=|Y
+20|Tax|sales_tax=|Y
+20|Other discounts|discount_amt=|Y
+20|Payment|total_amt=|Y
+20|Payment sent to|seller_email_id=|Y
+20|Issues with this transaction| |Y
+20|PayPal Email ID|email_reference_id=|Y
+21|abcd|txn_dt=|Y
+21|Transaction ID:|txn_id=|Y
+21|Hello|shop_name=|Y
+21|, You sent a payment of|total_amt=|Y
+21|It may take a few moments for this transaction| |Y
+21|Instructions to merchant|buyer_terms=|Y
+21|Merchant|seller_full_name=|Y
+21|Payment|total_amt=|Y
+21|PayPal Balance| |Y
+21|Description Amount|item_name=|Y
+21|USD to|currency_name=USD shop_name=|N
+21|currency_name|currency_name|Y
+21|shop_name|shop_name|Y
+21|Subtotal|Subtotal|Y
+21|Payment sent to|seller_email_id=|Y
+21|Receipt ID:|receipt_id=|Y
+21|Issues with this transaction| |Y
+21|PayPal Email ID|email_reference_id=|Y
+22|eBay Inc Shipping just sent you a refund|txn_dt=|Y
+22|Transaction ID:|txn_id=|Y
+22|Dear|shop_name=|Y
+22|, eBay Inc Shipping|seller_full_name=eBay Inc Shipping|Y
+22|just sent you a full refund of|total_amt|Y
+22|for your purchase| |Y
+22|Refund to PayPal Balance| |Y
+22|ShipSvc:|shipping_carrier_name=|Y
+22|Merchant information|seller_email_id=|Y
+22|, Trk#:|tracking_number=|Y
+22|Postage:|shpng_price=|Y
+22|Ins:|ins_amt=|Y
+22|Total:|total_amt=|Y
+22|Invoice Number:|invoice_id=|Y
+22|Note from merchant|buyer_terms=|Y
+22|Original transaction| |Y
+22|Sincerely,| |Y
+22|PayPal Email ID|email_reference_id=|Y
+23|Thank you for issuing a refund to|buyer_user_id=|Y
+23|Hi | |Y
+23|Youve issued a|total_amt=|Y
+23|refund for|item_name=|Y
+23|#|item_id=|Y
+23|. Well credit you the final| |Y
+23|Return ID:|return_id=|Y
+23|Buyer ID:|buyer_user_id=|Y
+23|Return shipping:|return_shipping=|Y
+23|Return Quantity:|qty_sold=|Y
+23|Email reference id:|email_reference_id=|Y
+23|eBay sent this message to|shop_name=|Y
+23|(shop_at_lemo)|seller_user_id=shop_at_lemo|Y
+23|Learn more  Why am| |Y
+25|Buyers name:|buyer_full_name|Y
+25|Buyers email:|buyer_email_id=|Y
+25|Transaction ID:|txn_id=|Y
+25|Transaction date:|txn_dt=|Y
+25|Transaction amount:|total_amt=|Y
+25|Your transaction ID:|ref_txn_id=|Y
+25|-------------------------| |Y
+25|Case number:| |Y
+25|Thank You| |Y
+25|provided has been verified.|dispute_buyer_notes=|Y
+26|Dear|shop_user_id=|Y
+26|Order ID:|order_id=|Y
+26|Item:|item_name=|Y
+26|Quantity:|qty_sold=|Y
+26|Return reason:|return_reason=|Y
+26|Buyer comments:|buyer_terms=|Y
+26|received:|return_request_received=|Y
+26|returnRequestId|return_id|Y
+26|Close the return request:| |Y
+26|You can use the following| |Y
+27|Order ID:|order_id=|Y
+27|Item:|item_name=|Y
+27|Qty:|qty_sold=|Y
+27|Return reason:|return_reason=|Y
+27|Buyer comments:|buyer_terms=|Y
+27|Request received:|return_request_received=|Y
+27|Sincerely| |Y
+28|Item Information|item_name=|Y
+28|#|item_id=|Y
+28|Return ID:|return_id=|Y
+28|Buyer ID:|buyer_user_id=|Y
+28|Return shipping:|return_shipping=|Y
+28|Return Quantity:|return_qty=|Y
+28|Buyer comments:|buyer_terms=|Y
+28|Because the buyer told| |Y
+28|The buyer| |Y
+28|. Well email you tracking information| |Y
+28|Email reference id:|email_reference_id=|Y
+28|eBay sent this message to|shop_name=|Y
+28|(shop_at_lemo)|seller_user_id=shop_at_lemo|Y
+28|Learn more  Why am| |Y
+29|eBay sent this message to|shop_name=|Y
+29|(shop_at_lemo).|seller_user_id=shop_at_lemo|Y
+29|Your registered name| |Y
+29|Hi|seller_user_id=|Y
+29|, Thanks for creating| |Y
+29|Tracking number:|tracking_number=|Y
+29|Shipping service:|shipping_carrier_name=|Y
+29|Total label cost:|total_amt=|Y
+29|Shipped to:|buyer_full_name=|Y
+29|Made a mistake on the label| |Y
+29|Shipped from:|seller_full_name=|Y
+29|Item # :|item_id=|Y
+29|Sale price:|sale_price=|Y
+29|End time:|ship_by_dt=|Y
+29|Buyer:|buyer_user_id=|Y
+29|Tracking information is updated| |Y
+29|Email reference id:|email_reference_id=|Y
+29|Learn More to| |Y
+29|eBay sent this email to you at|seller_email_id=|Y
+29|about your account| |Y
+30|Dear|seller_email_id=|Y
+30|Congratulations!| |Y
+30|Condition note:| |Y
+30|- - - - - - - - - - - -| |Y
+30|Order ID:|order_id=|Y
+30|Please ship this order| |Y
+30|Ship by:|ship_by_dt=|Y
+30|Item:|item_name=|Y
+30|Condition:|item_cndtn=|Y
+30|Listing ID:|listing_id=|Y
+30|SKU:|sku_id=|Y
+30|Quantity:|tot_qty_sold=|Y
+30|Order date:|order_dt=|Y
+30|Price:|sale_price=|Y
+30|Shipping:|shpng_price=|Y
+30|Amazon fees:|amazon_fees=|Y
+30|Your earnings:|total_amt=|Y
+31|Seller Email Address:|seller_email_id=|Y
+31|Seller Name:|seller_full_name=|Y
+31|Seller Contact Number:|seller_phone_no=|Y
+32|eBay sent this message to|shop_name=|Y
+32|(shop_at_lemo).|seller_user_id=shop_at_lemo|Y
+32|Your registered name| |Y
+32|Dear|seller_user_id=|Y
+32|, Heres some good news!|buyer_user_id=|Y
+32|has agreed to cancel the transaction| |Y
+32|Item # :|item_id=|Y
+32|End time:|item_end_time=|Y
+32|Sale price:|sale_price=|Y
+32|Quantity:|qty_sold=|Y
+32|Buyer:|buyer_user_id=|Y
+32|Case opened:|case_opened=|Y
+32|Case closed:|case_closed=|Y
+32|Marketplace Safety| |Y
+32|Email reference id:|email_reference_id=|Y
+32|Learn More to| |Y
+32|eBay sent this email to you at|seller_email_id=|Y
+32|about your account| |Y
+33|eBay sent this message to|shop_name=|Y
+33|(shop_at_lemo).|seller_user_id=shop_at_lemo|Y
+33|Your registered name| |Y
+33|Sale date:|sale_date=|Y
+33|Buyer:|buyer_user_id=|Y
+33|Item #|item_id=|Y
+33|Case opened:|case_opened=|Y
+33|View purchased item| |Y
+33|Email reference id:|email_reference_id=|Y
+33|Learn More to| |Y
+33|eBay sent this email to you at|seller_email_id=|Y
+33|about your account| |Y
+34|eBay sent this message to|shop_name=|Y
+34|(shop_at_lemo).|seller_user_id=shop_at_lemo|Y
+34|Your registered name| |Y
+34|If payment isnt received by|expected_payment_date=|Y
+34|, youll get| |Y
+34|Item # :|item_id=|Y
+34|Sale date:|sale_date=|Y
+34|Buyer:|buyer_user_id=|Y
+34|Case opened:|case_opened=|Y
+34|reference id:|email_reference_id=|Y
+34|View purchased| |Y
+34|Learn More| |Y
+34|email to you at|seller_email_id=|Y
+34|about your| |Y
+36|eBay sent this message to|shop_name=|Y
+36|(shop_at_lemo).|seller_user_id=shop_at_lemo|Y
+36|Your registered name is included| |Y
+36|Dear| |Y
+36|Sale price:|sale_price=|Y
+36|End time:|item_end_time=|Y
+36|Buyer:|buyer_user_id=|Y
+36|Shipping  Handling:|shipping_carrier_name=|Y
+36|Email reference id:|email_reference_id=|Y
+36|Learn More to| |Y
+36|eBay sent this email to you at|seller_email_id=|Y
+36|about your| |Y
+37|transferring money from PayPal to your bank|withdrawl_dt=|Y
+37|Hello|seller_full_name=|Y
+37|, You asked us to transfer|withdrawl_amt=|Y
+37|USD|currency_name=USD|Y
+37|money in your bank account by|expected_payment_date=|Y
+37|. Here are the details:| |Y
+37|Total amount transferred|withdrawl_amt=|Y
+37|Checking x-|withdrawl_4_digit_ac=|Y
+37|Transaction ID|txn_id=|Y
+37|Help| |Y
+37|Bank account|withdrawl_bank_name=|Y
+37|from PayPal to your bank| |Y
+37|PayPal Email ID|email_reference_id=|Y
+38|Transaction ID: Hello|seller_full_name=|Y
+38|, You created a shipping| |Y
+38|Your tracking number is|tracking_number=|Y
+38|Please keep this number| |Y
+38|Label purchase date|txn_dt=|Y
+38|Total shipping cost|total_amt=|Y
+38|Insured value| |Y
+38|transaction ID|txn_id=|Y
+38|----------------------------------------------------------------------| |Y
+38|Shipping address -|address_status_flag=|Y
+38|unconfirmed|unconfirmed buyer_full_name=|N
+38|buyer_full_name|buyer_full_name|Y
+38|Shipping details| |Y
+38|Mailing date:|ship_by_dt=|Y
+38|Shipper:| |Y
+38|Service type:|s_h_type=|Y
+38|.howTo| |Y
+38|Buyer Shipping address|buyer_full_name=|Y
+38|Shipper:|shipping_carrier_name=|Y
+38|Shipping Status:|shipping_status=|Y
+38|USD| currency_name=USD|N
+38|currency_name|currency_name|Y
+38|Help Center| |Y
+38|PayPal Email ID|email_reference_id=|Y
+39|eBay sent this message to|shop_name=|Y
+39|(shop_at_lemo).|seller_user_id=shop_at_lemo|Y
+39| Please prepare your item to ship| |Y
+39|You did it| |Y
+39|Your registered name is included to show this message originated from eBay| |Y 
+39|End time:|ship_by_dt=|Y
+39|Sale price:|sale_price=|Y
+39|Quantity sold:|qty_sold=|Y
+39|Quantity remaining:|qty_remaining=|Y
+39|Quantity:|tot_qty_sold=|Y
+39|Buyer:|buyer_full_name=|Y
+39|contact buyer| |Y 
+39|Email reference id:|email_reference_id=|Y
+39|Increase your chances| |Y
+39|Learn More to protect| |Y 
+39|email to you at|seller_email_id=|Y
+39|about your account| |Y
+40|eBay sent this message to|shop_name=|Y
+40|(shop_at_lemo).|seller_user_id=shop_at_lemo|Y
+40|Your registered name is| |Y
+40|Dear|buyer_user_id=|Y
+40|, Thank you for shopping on eBay| |Y
+40|Your total amount due is|total_amt=|Y
+40|Price Amount| |Y
+40|Subtotal:|sale_price=|Y
+40|Postage and packaging via|shipping_carrier_name=|Y
+40|More details about your purchase| |Y
+40|Shipping and handling via|s_h_type=|Y
+40|Service:|shpng_price=|Y
+40|Total|total_amt=|Y
+40|Email reference id:|email_reference_id=|Y
+40|Learn More to protect| |Y
+40|eBay sent this email to you at|seller_email_id=|Y
+40|about your account| |Y
+41|Dear|seller_email_id=|Y
+41|We initiated a transfer| |Y
+41|ending in|withdrawl_4_digit_ac=|Y
+41|in the amount of|withdrawl_amt=|Y
+41| on |withdrawl_dt=|Y
+41|Funds usually| |Y
+42|Hello| |Y
+42|Your buyer has sent the payment,| |Y
+42|Note to seller|buyer_terms=|Y
+42|Qty Amount|item_name=|Y
+42|Shipping address|address_status_flag=|Y
+42|Confirmed|Confirmed buyer_full_name=|N
+42|buyer_full_name|buyer_full_name|Y
+42|Shipping Details|shpng_details=|Y
+42|Seller Protection| |Y
+42|Item#|sale_date=|Y
+42|Subtotal|sale_price=|Y
+42|Payment| |Y
+42|Shipping and handling|shpng_price=|Y
+42|Payment sent to|shop_name=|Y
+42|Transaction ID:|txn_id=|Y
+42|Help Center| |Y
+42|PayPal Email ID|email_reference_id=|Y
+42|Total|total_amt=|Y
+43|sent you|total_amt=|Y
+43|Transaction ID:|txn_id=|Y
+43|Dear|seller_full_name=|Y
+43|, Just though| |Y
+43|like to know|buyer_full_name=|Y
+43|table.callToAction| |Y
+43|Note from |buyer_terms=|Y
+43|Get the details Once| |Y
+43|PayPal Email ID|email_reference_id=|Y
+44|eBay sent this message to|shop_name=|Y
+44|shop_at_lemo|seller_user_id=shop_at_lemo|Y
+44|Your registered name is included to show this message originated from eBay. Learn more .| |Y 
+44|Check out this offer| |Y
+44|Hi shop_at_lemo,|seller_user_id=shop_at_lemo|Y
+44|Want to sell this item fast|buyer_user_id=|Y
+44|has just made a best offer to buy it.| |Y
+44|Here are the details of the offer:|item_name=|Y
+44|Offer price:|offer_price=|Y
+44|Buy It Now price:|buy_it_now_price=|Y
+44|Your terms:|seller_terms=|Y
+44|Offer expires:|offer_expires=|Y
+44|Buyer user id:|buyer_user_id=|Y
+44|View Item| |Y
+44|Go to My eBay Interested in this offer| |Y 
+44|Email reference id:|email_reference_id=|Y
+44|Learn More to protect| |Y 
+45|eBay sent this message to|shop_name=|Y
+45|Hi |seller_user_id=|Y
+45|Heres what just happened:|buyer_user_id=|Y
+45|let us know that they havent received|item_name=|Y
+45|Your registered name| |Y
+45|and has requested a shipping| |Y
+45|resolve the problem by|disputed_resolve_dt=|Y
+45|. Most buyers and| |Y
+45|Buyers Message:|dispute_buyer_notes=|Y 
+45|Item # :|item_id=|Y
+45|Sale price:|sale_price=|Y
+45|Quantity:|qty_sold=|Y
+45|Sale date:|sale_date=|Y
+45|Buyer:|buyer_user_id=|Y
+45|Case opened:|case_opened=|Y
+45|View purchased item| |Y
+45|Email reference id:|email_reference_id=|Y
+45|Learn More to protect| |Y
+45|eBay sent this email to you at|seller_email_id=|Y
+45|about your account| |Y
